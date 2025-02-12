@@ -795,7 +795,7 @@ ABSTRACT_TYPE(/datum/job/medical)
 /datum/job/medical/roboticist
 	name = "Roboticist"
 	limit = 2
-	wages = 200
+	wages = PAY_DOCTORATE
 	slot_belt = list(/obj/item/device/pda2/medical/robotics)
 	slot_jump = list(/obj/item/clothing/under/rank/roboticist)
 	slot_foot = list(/obj/item/clothing/shoes/black)
@@ -840,7 +840,14 @@ ABSTRACT_TYPE(/datum/job/medical)
 	wages = PAY_UNTRAINED
 	low_priority_job = 1
 	slot_foot = list(/obj/item/clothing/shoes/white)
-	slot_jump = list(/obj/item/clothing/under/scrub/blue) //randomize this imo
+	slot_jump = list(/obj/item/clothing/under/scrub/teal=1,\
+	/obj/item/clothing/under/scrub/maroon =1,\
+	/obj/item/clothing/under/scrub/blue=1,\
+	/obj/item/clothing/under/scrub/purple=1,\
+	/obj/item/clothing/under/scrub/orange=1,\
+	/obj/item/clothing/under/scrub/pink=1,\
+	/obj/item/clothing/under/scrub/flower=1)
+	slot_ears = list(/obj/item/device/radio/headset/medical)
 
 	New()
 		..()
