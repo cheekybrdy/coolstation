@@ -17,6 +17,7 @@
 
 	var/mechanics_type_override = null //Fix for children of scannable items being reproduced in mechanics
 	var/artifact = null
+	var/cannot_be_stored = FALSE
 	var/move_triggered = 0
 	var/object_flags = 0
 
@@ -609,6 +610,7 @@
 	user.changeStatus("paralysis", 4 SECONDS)
 	user.changeStatus("weakened", 4 SECONDS)
 	src.visible_message("<span class='alert'><b>[src]</b> emits a loud thump and rattles a bit.</span>")
+	user.take_brain_damage(prob(50))
 
 	animate_storage_thump(src)
 
